@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Water Brush', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  width: 90vw;
+}
+
+.panel {
+  /* background-size: auto 100%; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  flex: 0.5;
+  transition: flex 0.3s ease-in;
+  border-radius: 30px;
+}
+
+.panel h3 {
+  color: white;
+  font-size: 48px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.2s ease-in 0.3s;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}

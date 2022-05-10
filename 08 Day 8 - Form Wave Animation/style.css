@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+:root {
+  --bg-color: #C4E4F4;
+  --text-color: #fff;
+  --accent-color: #04C37B;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* CONTAINER */
+.container {
+  background-color: rgba(31,31,31, 0.5);
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/* FORM */
+.form-control {
+  position: relative;
+  margin: 20px 0 40px 0;
+  width: 300px;
+}
+.form-control input {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 0;
+  border-bottom: 2px var(--text-color) solid;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: var(--accent-color);
+}
+.btn {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 10px;
+}
+.btn:focus {
+  outline: 0;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.text {
+  margin-top: 30px;
+  letter-spacing: 1px;
+}
+
+/* FORM LABEL */
+.form-control label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: var(--accent-color);
+  transform: translateY(-30px);
+}

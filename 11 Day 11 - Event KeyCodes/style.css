@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #e1e1e1;
+  font-family: monospace, sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* INSERT */
+.key {
+  border: 1px #999 solid;
+  background-color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+  min-width: 150px;
+  position: relative;
+}
+.key small {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  color: #555;
+  font-size: 14px;
+}

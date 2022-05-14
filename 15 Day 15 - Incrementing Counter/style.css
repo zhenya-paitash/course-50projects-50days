@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root {
+  --bg-color: #313131;
+  --accent-color: #db4458;
+  --counter-color: #abaaaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Righteous', cursive;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* CONUNTER */
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 50px;
+}
+.counter {
+  color: var(--counter-color);
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+
+/* ADAPTABILITY */
+@media (max-width: 764px) {
+  body {
+    flex-direction: column;
+  }
+}

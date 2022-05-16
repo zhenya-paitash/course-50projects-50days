@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #3494e4;
+  --text-color: #fff;
+  --border-color: #144fc6;
+  --fill-color: #6ab3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin: 10px 0 0;
+}
+h3 {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* CUP */
+.cup {
+  background-color: var(--text-color);
+  color: var(--border-color);
+  border: 4px solid var(--border-color);
+  border-radius: 0 0 40px 40px;
+  height: 350px;
+  width: 150px;
+  position: relative;
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* .cup::before {
+  content: '';
+  height: 6px;
+  width: 114%;
+  background-color: var(--border-color);
+  position: absolute;
+  top: -4px;
+  left: -7%;
+} */
+.cup.cup-small {
+  cursor: pointer;
+  height: 90px;
+  width: 50px;
+  border-radius: 0 0 18px 18px;
+  background-color: rgba(255,255,255, 0.8);
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  transition: 0.3s ease;
+}
+.cup.cup-small.full {
+  background-color: var(--fill-color);
+  color: var(--text-color);
+}
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.remained {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  transition: 0.3s ease;
+}
+.remained span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.remained small {
+  font-size: 12px;
+}
+.percentage {
+  background-color: var(--fill-color);
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  visibility: hidden;
+  /* transition: 0.3s ease; */
+  transition: 0.3s ease, visibility 0.1s ease;
+}
+.text {
+  text-align: center;
+  margin: 0 0 5px;
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+:root {
+  --primary-color: #202020;
+  --secondary-color: #f4f4f4;
+  --accent-color: #3c94e7;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Heebo', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+/* ====================
+BUTTON
+==================== */
+button {
+  position: relative;
+  padding: 24px 100px;
+  margin: 10px 0;
+  overflow: hidden;
+  border: 1px solid var(--accent-color);
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(240,240,240, .1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+button:focus {
+  outline: none;
+}
+button .circle {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: scale 0.5s ease-out;
+}
+
+/* ====================
+ANIMATION
+==================== */
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}

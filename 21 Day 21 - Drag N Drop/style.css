@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #202020;
+  --secondary-color: #3d3d3d;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+/* ====================
+BOX
+==================== */
+.empty {
+  height: 150px;
+  width: 150px;
+  margin: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 10px rgba(0,0,0, .15), 0 12px 12px rgba(0,0,0, .15);
+  background-color: var(--secondary-color);
+}
+.fill {
+  height: 148px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-image: url('https://source.unsplash.com/random/150x150');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+.hold {
+  border: 1px solid var(--border-color);
+}
+.hovered {
+  background-color: var(--primary-color);
+  border-color: #fff;
+  border-style: dashed;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}

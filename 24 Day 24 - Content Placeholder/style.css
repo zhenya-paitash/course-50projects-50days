@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+:root {
+  --primary-color: #ecf0f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Heebo', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+img {
+  max-width: 100%;
+}
+
+
+/* ====================
+CARD
+==================== */
+.card {
+  width: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(31,31,31, .15);
+}
+
+/* CARD HEADER */
+.card__header {
+  height: 200px;
+}
+.card__header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* CARD CONTENT */
+.card__content {
+  background-color: #fff;
+  padding: 30px;
+}
+.card__title {
+  height: 20px;
+  margin: 0;
+}
+.card__excerpt {
+  margin: 10px 0 20px;
+  color: #777;
+}
+.author {
+  display: flex;
+}
+.profile-img {
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.author__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100px;
+  margin-left: 10px;
+}
+.author__info small {
+  margin-top: 5px;
+  color: #aaa;
+}
+
+
+/* ====================
+ANIMATED BG
+==================== */
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 10%,
+    #f6f7f8 20%,
+    #f6f7f8 100%
+  );
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+.animated-bg__text {
+  display: inline-block;
+  height: 10px;
+  width: 100%;
+  margin: 0;
+  border-radius: 50px;
+}
+
+
+/* ====================
+ANIMATION
+==================== */
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+}

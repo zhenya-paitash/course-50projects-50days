@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+  --dark-color: #242424;
+  --white-color: #f9f9f9;
+  --accent-color: #b2acac;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  /* ? 1 rem = 20 px */
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+}
+
+
+/* ====================
+SLIDER CONTAINER
+==================== */
+.slider-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* SLIDE LEFT */
+.slide__left {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.slide__left > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+.slide__left h1 {
+  /* font-size: 40px; */
+  font-size: 2rem;
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+/* SLIDE RIGHT */
+.slide__right {
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.slide__right > div {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  /* font-size: 16px; */
+  /* padding: 15px;  */
+  color: var(--accent-color);
+  background-color: var(--white-color);
+}
+button:hover {
+  color: var(--dark-color);
+}
+button:focus {
+  outline: none;
+}
+.slider-container .aciton-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+.slider-container .aciton-buttons .btn__down {
+  transform: translate(-100%, 0%);
+  border-radius: 8px 0 0 8px;
+}
+.slider-container .aciton-buttons .btn__up {
+  transform: translate(0%, -100%);
+  border-radius: 0 8px 8px 0;
+}

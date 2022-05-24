@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color: #2a2a72;
+  --secondary-color: #4c2885;
+  --accent-color: #FFE69A;
+  --text-color: #f6f6f6;
+  --placeholder-color: #bbb;
+
+  --success-color: #7AF16C;
+  --info-color: #5AF0FB;
+  --warning-color: #F7D954;
+  --danger-color: #FB9771;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+USER FORM
+==================== */
+.user-form {
+  width: 100%;
+  max-width: 700px;
+}
+.user-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: block;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 
+    0 5px 10px rgba(154,160,185, .05),
+    0 15px 40px rgba(0,0,0, .1);
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+.user-form input::placeholder {
+  color: var(--placeholder-color);
+}
+.user-form input:focus {
+  outline: none;
+}
+
+/* ====================
+CARD
+==================== */
+.card {
+  max-width: 800px;
+  padding: 3rem;
+  margin: 0 1.5rem;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 
+    0 5px 10px rgba(154,160,185, .05),
+    0 15px 40px rgba(0,0,0, .1);
+  background-color: var(--secondary-color);
+}
+.avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+/* USER INFO */
+.user-info {
+  margin-left: 2rem;
+  color: #eee;
+}
+.user-info h2 {
+  margin-top: 0;
+}
+.user-info ul {
+  max-width: 400px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+.user-info li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* REPOS */
+.repo {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 640px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-form {
+    max-width: 400px;
+  }
+  .user-info ul {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color: #FFD24C;
+  --secondary-color: #92B4EC;
+  --accent-color: #FFE69A;
+  --light-color: #FFFFFF;
+  --dark-color: #313131;
+
+  --success-color: #7AF16C;
+  --info-color: #5AF0FB;
+  --warning-color: #F7D954;
+  --danger-color: #FB9771;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  color: var(--dark-color);
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+TOASTS & BUTTON
+==================== */
+.btn {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: var(--light-color);
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.96);
+  color: var(--dark-color);
+  background-color: var(--accent-color);
+}
+
+#toasts {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-height: 73%;
+  overflow: hidden;
+}
+.toast {
+  padding: 1rem 2rem;
+  margin: 0.4rem;
+  border-radius: 1rem;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+.toast.toast__dark {
+  color: var(--accent-color);
+  background-color: var(--dark-color);
+}
+.toast.success {
+  color: var(--success-color)
+}
+.toast.info {
+  color: var(--info-color)
+}
+.toast.warning {
+  color: var(--warning-color)
+}
+.toast.danger {
+  color: var(--danger-color)
+}
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 1080px) {
+  * {
+    font-size: 18px;
+  }
+  #toasts {
+    max-height: 56%;
+  }
+}
+@media (max-width: 860px) {
+  * {
+    font-size: 16px;
+  }
+  #toasts {
+    max-height: 51%;
+  }
+}
+@media (max-width: 720px) {
+  * {
+    font-size: 14px;
+  }
+  #toasts {
+    max-height: 43%;
+  }
+}

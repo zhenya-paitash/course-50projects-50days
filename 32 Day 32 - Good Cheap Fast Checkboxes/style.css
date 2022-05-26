@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+  --primary-color: #CE9461;
+  --primary-accent-color: #b06c31;
+  --secondary-color: #E0D8B0;
+  --accent-color: #fffb82;
+  --text-color: #FCFFE7;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+TOGGLES
+==================== */
+h2 {
+  letter-spacing: 1px;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.toggles {
+  display: flex;
+  margin-top: 100px;
+}
+.toggle-container {
+  width: 200px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.toggle-container span {
+  margin-top: 15px;
+  font-size: 24px;
+}
+.toggle {
+  visibility: hidden;
+}
+.label {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  margin: 0 15px 0;
+  display: inline-block;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--secondary-color);
+}
+.toggle:checked + .label {
+  background-color: var(--accent-color);
+}
+.ball {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  box-shadow: 10px 0 10px rgba(0,0,0, .1);
+  background: var(--text-color);
+  animation: slideOff 0.3s linear forwards;
+}
+.toggle:checked + .label .ball {
+  box-shadow: -10px 0 10px rgba(0,0,0, .1);
+  background: var(--primary-accent-color);
+  animation: slideOn 0.3s linear forwards;
+}
+
+
+/* ====================
+ANIMATION
+==================== */
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1)
+  }
+  50% {
+    transform: translateX(20px) scale(1.2)
+  }
+  100% {
+    transform: translateX(40px) scale(1)
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1)
+  }
+  50% {
+    transform: translateX(20px) scale(1.2)
+  }
+  100% {
+    transform: translateX(0) scale(1)
+  }
+}
+
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 860px) {
+  h2 {
+    font-size: 24px;
+  }
+  .toggles {
+    flex-direction: column;
+  }
+}

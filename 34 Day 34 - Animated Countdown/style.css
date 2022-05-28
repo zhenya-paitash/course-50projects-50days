@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+  --primary-color: #567af0;
+  --secondary-color: #fff764;
+  --text-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Permanent Marker', cursive;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+h4 {
+  margin: 5px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+
+/* ====================
+PRELOAD COUNTER
+==================== */
+.preload-counter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.preload-counter.hide {
+  transform: translate(-50%, -50%) scale(0);
+  animation: hide 0.2s ease-out;
+}
+
+/* NUMS */
+.nums {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 100px;
+  font-size: 100px;
+  color: var(--secondary-color);
+}
+.nums span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  transform-origin: bottom center;
+}
+.nums span.in {
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: goIn .5s ease-in-out;
+}
+.nums span.out {
+  transform: translate(-50%, -50%) rotate(-120deg);
+  animation: goOut .5s ease-in-out;
+}
+
+
+/* ====================
+PAGE CONTENT
+==================== */
+.page-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  text-align: center;
+}
+.page-content.show {
+  transform: translate(-50%, -50%) scale(1);
+  animation: show 0.5s ease-in;
+}
+.page-content h1 {
+  margin: 0;
+  font-size: 100px; 
+}
+.page-content button {
+  font-size: 100px;
+  padding: 20px 100px;
+  margin: 50px;
+  border: none;
+  border-radius: 200px;
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  background-color: var(--text-color);
+}
+.page-content button:focus {
+  outline: none;
+}
+.page-content button:active {
+  transform: scale(0.95);
+}
+
+
+/* ====================
+ANIMATION
+==================== */
+@keyframes hide {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes goIn {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  30% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes goOut {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  60% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}
+
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 720px) {
+  .page-content button {
+    font-size: 40px;
+    margin: 10px;
+  }
+}

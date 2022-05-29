@@ -1,0 +1,59 @@
+:root {
+  --primary-color: #111;
+  --secondary-color: #1d1d1d;
+  --accent-color: #c8ec4f;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+HOVERBOARD CONTAINER
+==================== */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  /* width square (18px + 2px margin * 2 ) * 30 squares in row */
+  max-width: calc(22px * 30);
+}
+.square {
+  height: 18px;
+  width: 18px;
+  margin: 2px;
+  box-shadow: 0 0 2px rgba(255,255,255, .1);
+  background-color: var(--secondary-color);
+  transition: background 2s ease, box-shadow 3s ease;
+}
+.square:hover {
+  /* background-color: var(--accent-color); */
+  transition-duration: 0s;
+}
+
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 720px) {
+  .square {
+    height: 10px;
+    width: 10px;
+  }
+  .container {
+    max-width: calc(14px * 30);
+  }
+}

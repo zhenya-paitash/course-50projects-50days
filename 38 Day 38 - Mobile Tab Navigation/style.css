@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(155,89,182, 0.7);
+}
+
+
+/* ====================
+PHONE
+==================== */
+.phone {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  width: 340px;
+  border: 4px solid #eee;
+  border-radius: 25px;
+  box-shadow: -10px 10px 10px rgba(31,31,31, 0.14);
+}
+.phone .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.phone .content.show {
+  opacity: 1;
+}
+
+/* NAVIGATION */
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: -5px;
+}
+nav ul {
+  display: flex;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  box-shadow: 0 -10px 10px rgba(0,0,0, .2);
+  background-color: #fff;
+}
+nav ul li {
+  position: relative;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.4s ease;
+}
+nav ul li::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  width: 4px;
+  height: 4px;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: #8e44ad;
+  transition: opacity 0.4s ease;
+}
+nav ul li p {
+  margin: 2px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+nav ul li:hover,
+nav ul li.active {
+  color: #8e44ad;
+}
+nav ul li.active::before {
+  opacity: 1;
+}

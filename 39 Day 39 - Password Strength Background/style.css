@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+
+/* ====================
+BACKGROUND PASSWORD FORM
+==================== */
+.background {
+  position: absolute;
+  top: -40px;
+  bottom: -40px;
+  left: -40px;
+  right: -40px;
+  z-index: -1;
+  filter: blur(20px);
+  background:
+    url('https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80')
+    no-repeat center center/cover;
+}

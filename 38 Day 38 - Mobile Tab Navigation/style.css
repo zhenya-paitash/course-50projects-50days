@@ -78,15 +78,46 @@ nav ul li::before {
   background-color: #8e44ad;
   transition: opacity 0.4s ease;
 }
-nav ul li p {
-  margin: 2px 0;
-  font-size: 12px;
-  font-weight: bold;
-}
 nav ul li:hover,
 nav ul li.active {
   color: #8e44ad;
 }
 nav ul li.active::before {
   opacity: 1;
+}
+
+nav ul li p {
+  visibility: hidden;
+  margin: 2px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+nav ul li.active p {
+  visibility: visible;
+}
+nav ul li i {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+nav ul li.active i {
+  align-items: unset;
+  height: 70%;
+}
+
+/* GLASS EFFECT */
+.phone::before {
+  content: '';
+  position: absolute;
+  top: -6%;
+  right: -150%;
+  width: 1000px;
+  height: 100px;
+  z-index: 1;
+  transform: translate(0%, 100%) rotate(45deg);
+  background: rgba(255,255,255, 0.4);
+  background: -webkit-linear-gradient(to left, rgba(0,0,0, 0.05), rgba(255,255,255, 0.4));
+  background: linear-gradient(to left, rgba(0,0,0, 0.05), rgba(255,255,255, 0.4));
 }

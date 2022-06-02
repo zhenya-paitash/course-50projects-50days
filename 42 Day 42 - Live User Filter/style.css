@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #f8f9fd;
+  --secondary-color: #3e57db;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+CONTAINER
+==================== */
+.container {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(31,31,31, 0.25);
+}
+
+/* HEADER */
+.header {
+  padding: 30px 20px;
+  border-radius: 10px 10px 0 0;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.header input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  color: var(--primary-color);
+  background-color: rgba(31,31,31, 0.25);
+}
+.header input:focus {
+  outline: none;
+}
+.title {
+  margin: 0;
+}
+.subtitle {
+  display: inline-block;
+  margin: 5px 0 20px;
+  opacity: 0.8;
+}
+
+/* USER LIST */
+.user-list {
+  max-height: 400px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style-type: none;
+  background-color: #fff;
+}
+.user-list li {
+  display: flex;
+  padding: 20px;
+}
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.user-list li.hide {
+  display: none;
+}
+.user-list img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.user-list .user-info {
+  margin-left: 10px;
+}
+.user-list .user-info h4 {
+  margin: 0 0 10px;
+}
+.user-list .user-info p {
+  font-size: 12px;
+}

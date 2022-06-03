@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+  --primary-color: #fef9f2;
+  --secondary-color: #555;
+  --accent-color: #e7c26b;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+
+/* ====================
+PANEL CONTAINER
+==================== */
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  padding: 30px;
+  font-size: 90%;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(31,31,31, 0.1);
+  background-color: #fff;
+}
+.panel-container strong {
+  line-height: 24px;
+}
+
+/* RATING */
+.ratings-container {
+  display: flex;
+  margin: 20px 0;
+}
+.rating {
+  flex: 1;
+  padding: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+.rating:is(.active, :hover) {
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(31,31,31, 0.1);
+  /* background-color: var(--accent-color); */
+}
+.rating img {
+  height: 40px;
+  width: 40px;
+}
+.rating small {
+  display: inline-block;
+  margin: 10px 0 0;
+  letter-spacing: 1px;
+  color: var(--secondary-color)
+}
+.rating:is(.active, :hover) small {
+  color: var(--accent-color);
+  /* color: var(--primary-color); */
+}
+
+/* BUTTON */
+.btn {
+  cursor: pointer;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  background-color: var(--accent-color);
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* HEART ICON */
+.ri-heart-fill {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #f65757;
+}

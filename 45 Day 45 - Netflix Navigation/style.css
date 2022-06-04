@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+  --black-color: #221f1f;
+  --red-color: #e50914;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* ====================
+NETFLIX NAVIGATION
+==================== */
+/* MENU TOGGLE */
+.nav-btn {
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+}
+.nav-btn:focus {
+  outline: none;
+}
+.open-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+/* LOGO */
+.logo {
+  width: 350px;
+}
+.nav .logo {
+  width: 150px;
+}
+.text {
+  text-transform: uppercase;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.nav.visible {
+  transform: translateX(0);
+}
+.nav-black {
+  width: 60%;
+  max-width: 480px;
+  min-width: 320px;
+  background-color: var(--black-color);
+  transition-delay: 0.4s;
+}
+.nav-black.visible {
+  transition-delay: 0s;
+}
+.nav-red {
+  width: 95%;
+  background-color: var(--red-color);
+  transition-delay: 0.2s;
+}
+.nav-red.visible {
+  transition-delay: 0s;
+}
+.nav-white {
+  position: relative;
+  width: 95%;
+  padding: 40px;
+  background-color: var(--white-color);
+  transition-delay: 0s;
+}
+.nav-white.visible {
+  transition-delay: 0.4s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  opacity: 0.3;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+}
+.list li {
+  margin: 20px 0;
+}
+.list li a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+.list ul {
+  padding-left: 20px;
+  list-style-type: none;
+}

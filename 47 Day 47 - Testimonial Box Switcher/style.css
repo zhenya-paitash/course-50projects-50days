@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+  --primary-color: #476ce4;
+  --secondary-color: #516ecd;
+  --accent-color: #8e44ad;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  padding: 10px;
+  margin: 0;
+  color: #313131;
+  background-color: #f4f4f4;
+}
+
+
+/* ====================
+TESTIMONIAL
+==================== */
+.testimonial-container {
+  position: relative;
+  max-width: 768px;
+  padding: 50px 80px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 10px 20px 40px rgba(31,31,31, 0.25);
+  color: #eee;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s ease-in-out;
+}
+.testimonial-container:hover {
+  background-color: var(--secondary-color);
+}
+
+.progress-bar {
+  height: 4px;
+  width: 100%;
+  transform-origin: left;
+  background-color: #eee;
+  animation: grow 10s linear infinite;
+}
+
+.quote {
+  position: absolute;
+  top: 70px;
+  font-size: 28px;
+  color: rgba(255,255,255, 0.3);
+}
+.quote.ri-double-quotes-r {
+  left: 40px;
+}
+.quote.ri-double-quotes-l {
+  right: 40px;
+}
+
+.testimonial {
+  line-height: 28px;
+  text-align: justify;
+}
+
+/* USER */
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user .user__img {
+  object-fit: cover;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+.user .user__info {
+  margin-left: 10px;
+}
+.user .username {
+  margin: 0;
+  letter-spacing: 1.2px;
+}
+.user .role {
+  margin: 6px 0;
+  font-weight: normal;
+  color: lightgray;
+}
+
+
+/* ====================
+ANIMATION
+==================== */
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+
+/* ====================
+MEDIA
+==================== */
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px 30px;
+  }
+  .progress-bar {
+    margin-top: 30px;
+  }
+  .quote {
+    display: none;
+  }
+}

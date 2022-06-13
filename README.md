@@ -1,5 +1,5 @@
 # 50 Projects In 50 Days - HTML, CSS & JavaScript
-### DEMO: [GitHub Pages](https://zhenya-paitash.github.io/50projects-50days/)
+## Demo: [GitHub Pages](https://zhenya-paitash.github.io/50projects-50days/)
 
 ```
 name:         50 Projects In 50 Days
@@ -9,7 +9,7 @@ year:         2020
 platform:     Udemy Inc.
 author:       Brad Traversy, Florin Pop
 stack:        HTML, CSS, JavaScript
-language:     english
+language:     English
 course:       https://www.udemy.com/course/50-projects-50-days/
 ```
 
